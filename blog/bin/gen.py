@@ -50,7 +50,7 @@ class BlogFormatter:
             '<!DOCTYPE html>\n<html lang="en"><head>'
             '<link rel="stylesheet" type="text/css" href="/blog/asset/pandoc.min.css">'
             f'{self.viewport}<meta name="description" content="soft-eng.info TOC">'
-            "<title>soft-eng.info TOC</head>"
+            "<title>soft-eng.info TOC</title></head>"
             "<body><h1>soft-eng.info</h1><ul>"
         )
         for file in reversed(self.files):

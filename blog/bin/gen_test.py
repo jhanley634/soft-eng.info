@@ -69,9 +69,21 @@ class GenTest(unittest.TestCase):
   <meta content="#317efb" name="theme-color"/>
   <meta content="soft-eng.info TOC" name="description"/>
   <title>
-   soft-eng.info TOC&lt;/head&gt;&lt;body&gt;&lt;h1&gt;soft-eng.info&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="hello"&gt;hello&lt;/a&gt;&lt;/li&gt;
+   soft-eng.info TOC
   </title>
  </head>
+ <body>
+  <h1>
+   soft-eng.info
+  </h1>
+  <ul>
+   <li>
+    <a href="hello">
+     hello
+    </a>
+   </li>
+  </ul>
+ </body>
 </html>
 
 """
