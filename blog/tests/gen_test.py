@@ -11,7 +11,7 @@ class GenTest(unittest.TestCase):
 
         self.assertGreater(len(bf.files), 2)
         self.assertEqual(bf.files, list(bf.prev.keys()))
-        self.assertEqual(bf.files, sorted(list(bf.next.keys())))
+        self.assertEqual(bf.files, sorted(bf.next.keys()))
 
         self.assertEqual('2021-12-14-complexity.html', bf._html_suffix(bf.files[0]))
 
