@@ -59,3 +59,29 @@ class GenTest(unittest.TestCase):
             self.expected_hello.lstrip(),
             html.read_text(),
         )
+
+    expected_index = """
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <link href="/blog/asset/pandoc.min.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#317efb" name="theme-color"/>
+  <meta content="soft-eng.info TOC" name="description"/>
+  <title>
+   soft-eng.info TOC&lt;/head&gt;&lt;body&gt;&lt;h1&gt;soft-eng.info&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="hello"&gt;hello&lt;/a&gt;&lt;/li&gt;
+  </title>
+ </head>
+</html>
+
+"""
+
+    def test_toc(self) -> None:
+        bf = BlogFormatter(self.folder)
+        bf.toc()
+
+        index = self.folder / "out" / "index.html"
+        self.assertEqual(
+            self.expected_index.lstrip(),
+            index.read_text(),
+        )
